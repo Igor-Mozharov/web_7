@@ -15,6 +15,6 @@ host = config.get('DB_DEV', 'host')
 port = config.get('DB_DEV', 'port')
 
 url_to_db = f'postgresql://{username}:{password}@{host}:{port}/{db_name}'
-engine = create_engine(url_to_db, echo=True)
+engine = create_engine(url_to_db, echo=True, pool_size=5)
 Session = sessionmaker(bind=engine)
 session = Session()

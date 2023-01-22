@@ -9,8 +9,9 @@ packages = [{include = "web_7"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 sqlalchemy = "^1.4.46"
-alembic = "^1.9.2"
-psycopg2-binary = "^2.9.5"
+alembic = "1.9.2"
+psycopg2 = "^2.9.5"
+faker = "^16.6.0"
 
 
 [build-system]
